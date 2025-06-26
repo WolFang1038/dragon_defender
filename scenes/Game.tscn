@@ -1,0 +1,470 @@
+[gd_scene load_steps=4 format=3 uid="uid://dc6pn8r08864j"]
+
+[ext_resource type="Texture2D" uid="uid://q6seo3waihrv" path="res://assets/pngs/background.png" id="1_cpr0p"]
+[ext_resource type="Texture2D" uid="uid://dl1xaiit2lvqc" path="res://assets/pngs/wall_basic.png" id="2_78awf"]
+[ext_resource type="FontFile" uid="uid://d3t8ujd256p28" path="res://assets/fonts/pixel_art/pixelart.ttf" id="3_cpr0p"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(4, 4)
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1, 0)
+scale = Vector2(0.815972, 0.815972)
+texture = ExtResource("1_cpr0p")
+
+[node name="WallBasics" type="Node" parent="."]
+
+[node name="WallBasic" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic2" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic3" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic4" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic5" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic6" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic7" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic19" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic32" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic33" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic34" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic35" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic36" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic37" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic38" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic39" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic8" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic9" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic10" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic11" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic12" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic13" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic14" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic40" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic15" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic16" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic17" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic18" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic20" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic21" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic22" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic41" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic23" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic24" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic25" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic26" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic27" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic42" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic43" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic44" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic45" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic46" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic47" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic48" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic49" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic50" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic51" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic52" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic53" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic54" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic55" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic56" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic57" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic58" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic59" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic60" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic28" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic29" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic30" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic31" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic61" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic62" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic63" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic64" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic65" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic66" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic67" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic68" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic69" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic70" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic71" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic72" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic73" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic74" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic75" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic76" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic77" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic78" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic79" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic80" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic81" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic82" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic83" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic84" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic85" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic86" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic87" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic88" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic89" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, -16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic90" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, -32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic91" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, -48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic92" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, -64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic93" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, 0)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic94" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, 16)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic95" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, 32)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic96" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, 48)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic97" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-104, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic98" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-88, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic99" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-8, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic100" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-24, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic101" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-40, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic102" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-56, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic103" type="Sprite2D" parent="WallBasics"]
+position = Vector2(-72, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic104" type="Sprite2D" parent="WallBasics"]
+position = Vector2(56, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic105" type="Sprite2D" parent="WallBasics"]
+position = Vector2(40, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic106" type="Sprite2D" parent="WallBasics"]
+position = Vector2(24, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic107" type="Sprite2D" parent="WallBasics"]
+position = Vector2(8, 64)
+texture = ExtResource("2_78awf")
+
+[node name="WallBasic108" type="Sprite2D" parent="WallBasics"]
+position = Vector2(72, 64)
+texture = ExtResource("2_78awf")
+
+[node name="Text" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Text"]
+offset_left = 89.0
+offset_top = -79.0
+offset_right = 140.0
+offset_bottom = -70.0
+theme_override_fonts/font = ExtResource("3_cpr0p")
+theme_override_font_sizes/font_size = 8
+text = "Gold     126 "
+
+[node name="Label2" type="Label" parent="Text"]
+offset_left = 89.0
+offset_top = -70.0
+offset_right = 138.0
+offset_bottom = -61.0
+theme_override_fonts/font = ExtResource("3_cpr0p")
+theme_override_font_sizes/font_size = 8
+text = "Lives  100"
