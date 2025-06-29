@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bowr2x3dr1a5a"
-path="res://.godot/imported/walls.png-1017e3c28505c0d55bf95e3ca7fc697b.ctex"
+uid="uid://c4o0jxd8f8avd"
+path="res://.godot/imported/tunnel_tiles.png-41f28f717fb9cdffe38b9939ab91b720.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/pngs/walls.png"
-dest_files=["res://.godot/imported/walls.png-1017e3c28505c0d55bf95e3ca7fc697b.ctex"]
+source_file="res://assets/pngs/tunnel_tiles.png"
+dest_files=["res://.godot/imported/tunnel_tiles.png-41f28f717fb9cdffe38b9939ab91b720.ctex"]
 
 [params]
 

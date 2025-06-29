@@ -1,4 +1,4 @@
 extends Label
 
 func _ready():
-	text = "lives     "+str(GameManager.lives)
+	GameManager.register_lives_label(self)

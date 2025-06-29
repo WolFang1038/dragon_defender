@@ -26,6 +26,10 @@ window/size/viewport_height=360
 window/size/mode=3
 window/stretch/mode="viewport"
 
+[editor]
+
+movie_writer/movie_file="D:/Godot/Projects/dragon-defender/dragon_defender/test_videos/test.avi"
+
 [input]
 
 left_click={
