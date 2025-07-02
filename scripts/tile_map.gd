@@ -1,4 +1,9 @@
 extends TileMap
+@onready var pathfinder: Node2D = $Pathfinder
+@onready var debug_line: Line2D = $Pathfinder/DebugLine
+
+func _ready():
+	find_enemy_path(Vector2i(-1,4),Vector2i(12,4))
 
 const tile_ids = {
 	"CAVE": Vector2i(0,0),
@@ -25,6 +30,16 @@ const tile_ids = {
 		"DLRU_TUNNEL": Vector2i(4,3),
 	}
 }
+func tile_to_id(tile_pos):
+	return tile_pos.x + tile_pos.y * self.get_used_rect().size.x
+	
+func find_enemy_path(start_pos: Vector2i, end_pos: Vector2i):
+	pathfinder.build_astar()
+	var pixel_enemy_path = pathfinder.astar.get_point_path(tile_to_id(start_pos), tile_to_id(end_pos))
+	var tiles_enemy_path = []
+	for pos in pixel_enemy_path:
+		tiles_enemy_path.append(local_to_map(pos))
+	debug_line.show_path(pixel_enemy_path)
 
 func clear_tile_at(x: int, y: int):
 	var tile_pos = Vector2i(x, y)  
@@ -35,6 +50,7 @@ func clear_tile_at(x: int, y: int):
 		GameManager._update_gold(-20)
 		var tunnel_type = find_tunnel_type(tile_pos)
 		set_cell(0, tile_pos, 0, tunnel_type)
+		find_enemy_path(Vector2i(-1,4),Vector2i(12,4))
 
 func find_tunnel_type(tile_pos):
 	var tunnel_type = "_TUNNEL"
@@ -89,4 +105,3 @@ func _unhandled_input(event):
 				var atlas_coords = get_cell_atlas_coords(0,pos)
 				if atlas_coords == Vector2i(2,0) and pos != tile_coords:
 					set_cell(0,pos, 0, tile_ids["CAVE"])
-				

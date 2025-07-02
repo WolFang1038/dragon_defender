@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dc6pn8r08864j"]
+[gd_scene load_steps=16 format=3 uid="uid://dc6pn8r08864j"]
 
 [ext_resource type="Script" uid="uid://dwh4xxv6aidv4" path="res://scripts/game.gd" id="1_aug50"]
 [ext_resource type="Texture2D" uid="uid://q6seo3waihrv" path="res://assets/pngs/background.png" id="1_cpr0p"]
@@ -7,10 +7,16 @@
 [ext_resource type="Texture2D" uid="uid://c4o0jxd8f8avd" path="res://assets/pngs/tunnel_tiles.png" id="3_kiw3p"]
 [ext_resource type="Script" uid="uid://3x8f14e6rcj8" path="res://scripts/lives_count.gd" id="3_s0nni"]
 [ext_resource type="Script" uid="uid://783i2sxqydka" path="res://scripts/tile_map.gd" id="4_400sg"]
+[ext_resource type="Script" uid="uid://cy16qmd5r0ul5" path="res://scripts/pathfinder.gd" id="5_400sg"]
+[ext_resource type="Script" uid="uid://ceferyat1kt4o" path="res://scripts/debug_line.gd" id="6_g4kob"]
+[ext_resource type="Script" uid="uid://b15mlh6b8mfq7" path="res://scripts/enemies.gd" id="10_3xj3m"]
+[ext_resource type="PackedScene" uid="uid://cdvolg23nrs66" path="res://scenes/bandit.tscn" id="10_qy1jj"]
+[ext_resource type="Script" uid="uid://d2ft231k7mtku" path="res://scripts/game_controller.gd" id="12_2rd6h"]
+[ext_resource type="Script" uid="uid://bwq5gpvr657yv" path="res://scripts/wave_manager.gd" id="13_7ua8r"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_400sg"]
 texture = ExtResource("3_kiw3p")
-texture_region_size = Vector2i(32, 32)
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -35,7 +41,7 @@ texture_region_size = Vector2i(32, 32)
 0:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_qy1jj"]
-tile_size = Vector2i(32, 32)
+tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_400sg")
 
 [node name="Game" type="Node2D"]
@@ -45,36 +51,55 @@ script = ExtResource("1_aug50")
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
-position = Vector2(16, -5)
-scale = Vector2(1.64844, 1.45833)
+position = Vector2(-4.49998, -1.00003)
+scale = Vector2(2.59961, 2.60417)
 texture = ExtResource("1_cpr0p")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-224, -144)
+position = Vector2(-448, -288)
 tile_set = SubResource("TileSet_qy1jj")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0, 131074, 0, 0, 131075, 0, 0, 196611, 0, 0, 196612, 0, 0, 2, 0, 0, 3, 0, 0, 65539, 0, 0, 131073, 0, 0, 196609, 0, 0, 196610, 0, 0, 131076, 0, 0, 65540, 0, 0, 4, 0, 0, 5, 0, 0, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 10, 0, 0, 11, 0, 0, 9, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 393227, 0, 0, 327691, 0, 0, 196619, 0, 0, 131083, 0, 0, 65547, 0, 0, 65546, 0, 0, 65545, 0, 0, 65544, 0, 0, 65543, 0, 0, 65542, 0, 0, 65541, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 131077, 0, 0, 131081, 0, 0, 131082, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196614, 0, 0, 196613, 0, 0, 196618, 0, 0, 327689, 0, 0, 327690, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 393226, 0, 0, 393225, 0, 0, 393224, 0, 0, 393223, 0, 0, 393222, 0, 0, 393221, 0, 0, 393220, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 262144, 65536, 2, 262145, 65536, 2, 262146, 65536, 2, 262147, 65536, 2, 262148, 65536, 2, 262149, 65536, 2, 262150, 65536, 2, 262151, 65536, 2, 262153, 65536, 2, 262154, 65536, 2, 262155, 65536, 2, 262152, 65536, 2)
+layer_0/tile_data = PackedInt32Array(0, 0, 0, 196608, 0, 0, 131072, 0, 0, 65536, 0, 0, 1, 0, 0, 65537, 0, 0, 65538, 0, 0, 131074, 0, 0, 131075, 0, 0, 196611, 0, 0, 196612, 262144, 2, 2, 0, 0, 3, 0, 0, 65539, 0, 0, 131073, 0, 0, 196609, 0, 0, 196610, 0, 0, 131076, 262144, 2, 65540, 262144, 2, 4, 327680, 2, 5, 65536, 2, 327680, 0, 0, 393216, 0, 0, 458752, 0, 0, 6, 131072, 2, 7, 0, 0, 8, 0, 0, 10, 0, 0, 11, 0, 0, 9, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 393227, 0, 0, 327691, 0, 0, 196619, 0, 0, 131083, 0, 0, 65547, 0, 0, 65546, 0, 0, 65545, 0, 0, 65544, 0, 0, 65543, 0, 0, 65542, 262144, 2, 65541, 0, 0, 131078, 262144, 2, 131079, 0, 0, 131080, 0, 0, 131077, 0, 0, 131081, 0, 0, 131082, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196614, 262144, 2, 196613, 0, 0, 196618, 0, 0, 327689, 0, 0, 327690, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 262144, 2, 327687, 0, 0, 327688, 262144, 2, 393226, 0, 0, 393225, 0, 0, 393224, 0, 2, 393223, 65536, 2, 393222, 196608, 2, 393221, 0, 0, 393220, 0, 0, 393219, 0, 0, 393218, 0, 0, 393217, 0, 0, 524288, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 262144, 65536, 2, 262145, 65536, 2, 262146, 65536, 2, 262147, 65536, 2, 262148, 0, 2, 262149, 0, 0, 262150, 262144, 2, 262151, 0, 0, 262153, 65536, 2, 262154, 65536, 2, 262155, 65536, 2, 262152, 327680, 2, 327679, 196608, 1, 262156, 65536, 1)
 script = ExtResource("4_400sg")
 
-[node name="Text" type="Node" parent="."]
+[node name="Pathfinder" type="Node2D" parent="TileMap"]
+position = Vector2(224, 144)
+script = ExtResource("5_400sg")
+
+[node name="DebugLine" type="Line2D" parent="TileMap/Pathfinder"]
+position = Vector2(-225, -144)
+points = PackedVector2Array(2027, -242)
+width = 2.0
+default_color = Color(1, 0, 0, 1)
+script = ExtResource("6_g4kob")
 
 [node name="GoldCount" type="Label" parent="."]
-offset_left = 173.0
-offset_top = -139.0
-offset_right = 249.0
-offset_bottom = -125.0
+offset_left = 423.0
+offset_top = -307.0
+offset_right = 499.0
+offset_bottom = -293.0
 theme_override_fonts/font = ExtResource("3_cpr0p")
 theme_override_font_sizes/font_size = 16
 text = "Gold     x"
 script = ExtResource("2_s0nni")
 
 [node name="LivesCount" type="Label" parent="."]
-offset_left = 173.0
-offset_top = -121.0
-offset_right = 271.0
-offset_bottom = -90.0
+offset_left = 423.0
+offset_top = -289.0
+offset_right = 521.0
+offset_bottom = -258.0
 theme_override_fonts/font = ExtResource("3_cpr0p")
 theme_override_font_sizes/font_size = 16
 text = "Lives  20
 "
 script = ExtResource("3_s0nni")
+
+[node name="Enemies" type="Node2D" parent="."]
+script = ExtResource("10_3xj3m")
+enemy_scenes = Array[PackedScene]([ExtResource("10_qy1jj")])
+
+[node name="GameController" type="Node" parent="."]
+script = ExtResource("12_2rd6h")
+
+[node name="WaveManager" type="Node" parent="GameController"]
+script = ExtResource("13_7ua8r")

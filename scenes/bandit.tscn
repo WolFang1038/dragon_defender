@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://cdvolg23nrs66"]
+
+[ext_resource type="Texture2D" uid="uid://dfxrfqjpu47tu" path="res://assets/pngs/enemies/bandit/bandit_sprite_sheet.png" id="1_gvbh8"]
+[ext_resource type="Script" uid="uid://ejobtqmnlvm1" path="res://scripts/bandit.gd" id="1_wjvvg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rkhdv"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(0, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mrb3"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(20, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r1qhc"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(40, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7nmy"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(60, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t6vea"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(80, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2xaei"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(100, 0, 20, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en7xe"]
+atlas = ExtResource("1_gvbh8")
+region = Rect2(120, 0, 20, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5w5lp"]
+animations = [{
+"frames": [{
+"duration": 1.5,
+"texture": SubResource("AtlasTexture_rkhdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mrb3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r1qhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7nmy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t6vea")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2xaei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en7xe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivkpt"]
+size = Vector2(15, 22)
+
+[node name="Bandit" type="Area2D"]
+script = ExtResource("1_wjvvg")
+
+[node name="BanditAnimation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5w5lp")
+frame_progress = 0.491699
+
+[node name="BanditCollision" type="CollisionShape2D" parent="."]
+visibility_layer = 16
+position = Vector2(2.5, 0)
+shape = SubResource("RectangleShape2D_ivkpt")
