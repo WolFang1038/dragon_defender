@@ -68,9 +68,10 @@ script = ExtResource("1_wjvvg")
 
 [node name="BanditAnimation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5w5lp")
-frame_progress = 0.491699
+autoplay = "default"
+frame_progress = 0.0478023
 
 [node name="BanditCollision" type="CollisionShape2D" parent="."]
 visibility_layer = 16
-position = Vector2(2.5, 0)
+position = Vector2(2, 0)
 shape = SubResource("RectangleShape2D_ivkpt")

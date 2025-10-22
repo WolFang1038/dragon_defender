@@ -7,7 +7,9 @@ func _ready():
 	build_astar()
 
 func tile_to_id(tile_pos):
-	return tile_pos.x + tile_pos.y * tilemap.get_used_rect().size.x
+	var used_rect := tilemap.get_used_rect()
+	var offset_pos = tile_pos - used_rect.position  # shift all tiles to positive space
+	return offset_pos.x + offset_pos.y * used_rect.size.x
 
 func build_astar():
 	var tunnels = tilemap.tile_ids["TUNNELS"].values()  #Finds all the tunnels values
@@ -19,7 +21,7 @@ func build_astar():
 			astar.add_point(id, tilemap.map_to_local(pos))
 
 # Add connections between neighboring tunnel tiles
-	for pos in tilemap.get_used_cells(0):                
+	for pos in tilemap.get_used_cells(0):              
 		var atlas = tilemap.get_cell_atlas_coords(0, pos) 
 		if atlas in tunnels:                              
 			var current_id = tile_to_id(pos)                
